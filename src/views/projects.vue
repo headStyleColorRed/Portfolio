@@ -143,39 +143,31 @@ export default {
   padding: 0 10vw;
   padding-top: 2rem;
 }
-
 .projectsWrapp {
   padding-bottom: 15vh;
 }
-
-
 .projectsWrapp h1 {
   color: rgb(207, 139, 12);
   font-size: 3.5rem;
   line-height: 3rem;
 }
-
 .opposite {
   display: grid;
 }
-
 .textoExplicacion {
   color: whitesmoke;
   font-size: 0.9rem;
   width: 20vw;
   justify-self: right;
 }
-
 .textoExplicacionDerecha {
   color: whitesmoke;
   font-size: 0.9rem;
   width: 20vw;
 }
-
 .fecha {
   color: rgb(207, 139, 12);
 }
-
 .cuadradoThumbnail {
   position: absolute;
   top: 0;
@@ -190,12 +182,10 @@ export default {
   transition: 400ms ease-in-out;
   z-index: 2;
 }
-
 .cuadradoThumbnailWrapper:hover > .cuadradoThumbnail {
   opacity: 0;
   transform: translate(200px);
 }
-
 .cuadradoThumbnail h3 {
   color: white;
   z-index: 2;
@@ -204,7 +194,6 @@ export default {
   font-family: "Merienda", cursive;
   font-weight: 300;
 }
-
 .thumbnailImg {
   height: 100%;
   width: 100%;
@@ -213,18 +202,15 @@ export default {
   left: 0;
   opacity: 0.8;
 }
-
 .chineseIcono {
   height: 13vh;
   z-index: 2;
   justify-self: center;
   align-self: center;
 }
-
 .enAzul {
   color: #08fdd8;
 }
-
 .cuadradoThumbnailBack {
   position: absolute;
   top: 0;
@@ -234,7 +220,6 @@ export default {
   font-size: 0.9rem;
   margin-top: 1rem;
 }
-
 .botonGooglePlay {
   font-family: "Merienda", cursive;
   color: whitesmoke;
@@ -246,18 +231,14 @@ export default {
   border-radius: 5px;
   margin-top: 3rem;
 }
-
 .botonGooglePlay:hover {
   color: #08fdd8;
   border: 1px solid #08fdd8;
 }
-
 a {
   text-decoration: none;
 }
-
 /*  //////////     D E R E C H A    ///////////   */
-
 .cuadradoThumbnailWrapperDerecha {
   display: grid;
 }
@@ -275,12 +256,10 @@ a {
   z-index: 2;
   display: inherit;
 }
-
 .cuadradoThumbnailWrapperDerecha:hover > .cuadradoThumbnailDerecha {
   opacity: 0;
   transform: translate(-200px);
 }
-
 .cuadradoThumbnailDerecha h3 {
   color: white;
   z-index: 2;
@@ -289,7 +268,6 @@ a {
   font-family: "Merienda", cursive;
   font-weight: 300;
 }
-
 .thumbnailImg {
   height: 100%;
   width: 100%;
@@ -298,14 +276,12 @@ a {
   left: 0;
   opacity: 0.6;
 }
-
 .cuadradoThumbnailBackDerecha {
   justify-self: right;
   color: whitesmoke;
   text-align: center;
   font-size: 0.9rem;
 }
-
 .thumbnailImgDerecha {
   height: 100%;
   width: 100%;
