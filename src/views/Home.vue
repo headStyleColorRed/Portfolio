@@ -59,69 +59,148 @@ export default {
   height: 100vh;
 }
 
-.landing {
-  color: whitesmoke;
-  text-align: center;
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: grid;
+/*-------------- FULL SCREEN ----------------*/
+@media only screen and (min-width: 1001px) {
+  .landing {
+    color: whitesmoke;
+    text-align: center;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: grid;
+  }
+
+  .landing h1 {
+    font-size: 2.8rem;
+    font-family: roboto;
+    font-weight: 100;
+    line-height: 4rem;
+  }
+
+  #Nombre {
+    color: rgb(207, 139, 12);
+    font-weight: 300;
+  }
+
+  .características {
+    margin-top: 1rem;
+    font-size: 0.8rem;
+    color: rgb(143, 143, 143);
+  }
+
+  .separador {
+    margin: 0 1rem;
+  }
+
+  .flechArrow {
+    position: absolute;
+    top: 60%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+  }
+
+  .flechaIzquierda {
+    position: absolute;
+    top: 60%;
+    right: 10%;
+    transform: translate(-50%, -50%);
+  }
+
+  .checkMyWork {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Reenie Beanie", cursive;
+    color: whitesmoke;
+    font-weight: 100;
+    cursor: pointer;
+    transition: 200ms ease-in-out;
+    border: 1px solid whitesmoke;
+    padding: 0.2rem 1.3rem;
+    border-radius: 5px;
+  }
+
+  .checkMyWork:hover {
+    color: #08fdd8;
+    border: 1px solid #08fdd8;
+  }
 }
 
-.landing h1 {
-  font-size: 2.8rem;
-  font-family: roboto;
-  font-weight: 100;
-  line-height: 4rem;
+
+/*-------------- IPHONE 5 ----------------*/
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: portrait){
+  
+  .landing {
+    color: whitesmoke;
+    text-align: center;
+    display: grid;
+    padding: 1rem;
+  }
+
+  .landing h1 {
+    font-size: 2rem;
+    font-family: roboto;
+    font-weight: 100;
+    line-height: 4rem;
+  }
+
+  #Nombre {
+    color: rgb(207, 139, 12);
+    font-weight: 300;
+  }
+
+  .características {
+    margin-top: 1rem;
+    font-size: 0.8rem;
+    color: rgb(143, 143, 143);
+  }
+
+  .separador {
+    margin: 0 1rem;
+  }
+
+  .flechArrow {
+    display: none;
+  }
+
+  .flechaIzquierda {
+    display: none;
+  }
+
+  .checkMyWork {
+    text-align: center;
+    font-family: "Reenie Beanie", cursive;
+    color: whitesmoke;
+    font-weight: 100;
+    cursor: pointer;
+    transition: 200ms ease-in-out;
+    border: 1px solid whitesmoke;
+    border-radius: 5px;
+    margin: 0 4rem;
+    margin-top: 7rem;
+  }
+
+  .checkMyWork:hover {
+    color: #08fdd8;
+    border: 1px solid #08fdd8;
+  }
+
 }
 
-#Nombre {
-  color: rgb(207, 139, 12);
-  font-weight: 300;
-}
-
-.características {
-  margin-top: 1rem;
-  font-size: 0.8rem;
-  color: rgb(143, 143, 143);
-}
-
-.separador {
-  margin: 0 1rem;
-}
-
-.flechArrow {
-  position: absolute;
-  top: 60%;
-  left: 15%;
-  transform: translate(-50%, -50%);
-}
-
-.flechaIzquierda {
-  position: absolute;
-  top: 60%;
-  right: 10%;
-  transform: translate(-50%, -50%);
-}
-
-.checkMyWork {
-  position: absolute;
-  top: 80%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-family: "Reenie Beanie", cursive;
-  color: whitesmoke;
-  font-weight: 100;
-  cursor: pointer;
-  transition: 200ms ease-in-out;
-  border: 1px solid whitesmoke;
-  padding: 0.2rem 1.3rem;
-  border-radius: 5px;
-}
-
-.checkMyWork:hover {
-  color: #08fdd8;
-  border: 1px solid #08fdd8;
-}
 </style>
+
+
+/*-------------- IPHONE 5 ----------------*/
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: portrait)
+
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px)
+
+/*-------------- HALF SCREEN ----------------*/
+@media only screen and (min-device-width: 500px) and (max-width: 1000px) 
+
+
+/*-------------- FULL SCREEN ----------------*/
+@media only screen and (min-width: 1001px)
