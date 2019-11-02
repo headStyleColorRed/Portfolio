@@ -16,7 +16,10 @@
               href="https://tangerine-coder.firebaseapp.com/"
             >Tangerine Coder</a>
           </span> for more details or just
-          <span class="contact" v-on:click="$router.push('/contact')">contact</span> me.
+          <span
+            class="contact"
+            v-on:click="$router.push('/contact')"
+          >contact</span> me.
         </p>
       </div>
       <div class="rightPart">
@@ -67,7 +70,7 @@ export default {
           longitudCero: "0rem"
         },
         5: {
-          nombre: "C && Unix",
+          nombre: "C & Unix",
           longitud: "9rem",
           longitudCero: "0rem"
         },
@@ -170,10 +173,8 @@ export default {
   }
 }
 
-
 /*-------------- IPHONE 5 ----------------*/
-@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: portrait)
-{
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: portrait) {
   .skills {
     width: 100vw;
     background-color: #252627;
@@ -243,7 +244,78 @@ export default {
     height: 10px;
     background-color: rgb(207, 139, 12);
   }
+}
 
+@media only screen and (min-device-width: 500px) and (max-width: 1000px) {
+  .skills {
+    width: 100vw;
+    background-color: #252627;
+    display: grid;
+  }
+
+  .skillsWrapp {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .leftPart h1 {
+    color: rgb(207, 139, 12);
+    font-size: 3.5rem;
+    line-height: 3rem;
+  }
+
+  .leftPart {
+    margin-top: 4vh;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    color: whitesmoke;
+  }
+
+  .leftPart p {
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    margin-bottom: -0.5rem;
+  }
+
+  .contact {
+    color: rgb(207, 139, 12);
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  .tangerineCoder {
+    color: rgb(207, 139, 12);
+    cursor: pointer;
+  }
+
+  a {
+    text-decoration: none;
+    color: rgb(207, 139, 12);
+  }
+
+  .rightPart {
+    padding-left: 3rem;
+  }
+
+  .habilidadesThumbnail {
+    display: grid;
+    color: whitesmoke;
+    font-size: 0.9rem;
+    margin-bottom: 1.4rem;
+  }
+
+  .barraProgreso {
+    margin-top: -0.7rem;
+    background-color: rgb(87, 87, 87);
+    width: 17rem;
+    height: 10px;
+  }
+
+  .barraNaranja2 {
+    width: 0rem;
+    height: 10px;
+    background-color: rgb(207, 139, 12);
+  }
 }
 </style>
 

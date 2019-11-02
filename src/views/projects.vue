@@ -10,9 +10,9 @@
         <v-timeline-item small color="#CF8B0C">
           <span slot="opposite" class="opposite">
             <p class="textoExplicacion">
-              <span class="fecha">03/2018 -</span>This is a PWA app that I developed from scratch while living in China. With this project I learned the ins and outs of the Vue framework and how to manage a multi-language app. Technologies used:
+              <span class="fecha">05/2019 -</span> For this website I wanted to practice with the app state and reactiveness of Vuex.  Technologies used:
               <br />
-              <span class="enAzul">PWA / Vue / Vuetify / Axios</span>
+              <span class="enAzul">Vue / Vue Router / Vuex /Vuetify</span>
             </p>
           </span>
 
@@ -37,9 +37,10 @@
         <v-timeline-item small color="#CF8B0C">
           <span slot="opposite" class="opposite">
             <p class="textoExplicacionDerecha">
-              <span class="fecha">03/2018 -</span>This is a PWA app that I developed from scratch while living in China. With this project I learned the ins and outs of the Vue framework and how to manage a multi-language app. Technologies used:
+              <span class="fecha">02/2019 -</span> For this restaurant I used fresh colors and paralax effects.
+              Technologies used:
               <br />
-              <span class="enAzul">PWA / Vue / Vuetify / Axios</span>
+              <span class="enAzul">Vue / Vuetify / Html / Css</span>
             </p>
           </span>
 
@@ -85,20 +86,19 @@
           </div>
         </v-timeline-item>
 
-        <!--  R E S T A U R A N T S   S H O P    -->
+        <!--  H E L I O S    -->
         <v-timeline-item small color="#CF8B0C">
           <span slot="opposite" class="opposite">
             <p class="textoExplicacionDerecha">
-              <span class="fecha">03/2018 -</span>This is a PWA app that I developed from scratch while living in China. With this project I learned the ins and outs of the Vue framework and how to manage a multi-language app. Technologies used:
+              <span class="fecha">01/2018 -</span>This is a mock-up website of a famous CryptoCurrency.
               <br />
-              <span class="enAzul">PWA / Vue / Vuetify / Axios</span>
+              <span class="enAzul">Vue / Vuetify / Html / Css</span>
             </p>
           </span>
 
           <div class="cuadradoThumbnailWrapperDerecha">
             <div class="cuadradoThumbnailDerecha" style="backgroundColor: #23423A">
               <img class="thumbnailImgDerecha" src="../assets/fotos/helios.png" alt />
-              <h3 style="font-family: 'Ubuntu', sans-serif;font-size:3rem; color:black;">Helios</h3>
             </div>
             <div class="cuadradoThumbnailBackDerecha">
               <p>Check my App in Google Play:</p>
@@ -109,9 +109,15 @@
           </div>
         </v-timeline-item>
       </v-timeline>
+
       <div class="cards_wrapper">
         <!--    C L O T H E S    S T O R E       -->
-        <v-card class="mx-auto" max-width="300" raised>
+        <v-card
+          v-on:click="go_to_web('https://shop-store-ec247.firebaseapp.com/')"
+          class="mx-auto pointer"
+          max-width="300"
+          raised
+        >
           <v-img class="white--text align-end" height="150" src="../assets/fotos/vestidos.png"></v-img>
 
           <h4 class="project_title">FashionHub</h4>
@@ -122,7 +128,12 @@
         </v-card>
 
         <!--  R E S T A U R A N T S   S H O P    -->
-        <v-card class="mx-auto" max-width="300" raised>
+        <v-card
+          v-on:click="go_to_web('https://restauranteshop-4a866.web.app/')"
+          class="mx-auto pointer"
+          max-width="300"
+          raised
+        >
           <v-img class="white--text align-end" height="150" src="../assets/fotos/restaurante.png"></v-img>
 
           <h4 class="project_title">La Cavatina</h4>
@@ -133,7 +144,12 @@
         </v-card>
 
         <!--    T R A V E L    C H I N A      -->
-        <v-card class="mx-auto" max-width="300" raised>
+        <v-card
+          v-on:click="go_to_web('https://play.google.com/store/apps/details?id=com.travelchina.tendays&gl=ES')"
+          class="mx-auto pointer"
+          max-width="300"
+          raised
+        >
           <v-img class="white--text align-end" height="150" src="../assets/fotos/china.jpg"></v-img>
 
           <h4 class="project_title">Travel China</h4>
@@ -144,7 +160,12 @@
         </v-card>
 
         <!--   H E L I O S      -->
-        <v-card class="mx-auto" max-width="300" raised>
+        <v-card
+          v-on:click="go_to_web('https://helios-a844e.firebaseapp.com/')"
+          class="mx-auto pointer"
+          max-width="300"
+          raised
+        >
           <v-img class="white--text align-end" height="150" src="../assets/fotos/helios.png"></v-img>
 
           <h4 class="project_title">Helios</h4>
@@ -170,6 +191,11 @@ export default {
       this.opacidad = 1;
     }, 100);
   },
+  methods: {
+    go_to_web(event) {
+      window.open(event, "_blank");
+    }
+  },
   components: {}
 };
 </script>
@@ -177,8 +203,7 @@ export default {
 <style scoped>
 /*-------------- FULL SCREEN ----------------*/
 @media only screen and (min-width: 1001px) {
-
-  .cards_wrapper{
+  .cards_wrapper {
     display: none;
   }
   .temporalidad {
@@ -388,33 +413,54 @@ export default {
   }
 
   .cards_wrapper {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  margin-top: 3rem;
-  grid-gap: 3rem
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    margin-top: 3rem;
+    grid-gap: 3rem;
+  }
+  .project_title {
+    padding: 0.5rem;
+    margin-left: 1rem;
+  }
 }
-.project_title{
-  padding: 0.5rem;
-  margin-left: 1rem;
+
+@media only screen and (min-device-width: 500px) and (max-width: 1000px) {
+  .temporalidad {
+    display: none;
+  }
+  .projects {
+    min-height: 100vh;
+    width: 100vw;
+    background-color: #252627;
+  }
+
+  .projectsWrapp {
+    padding-bottom: 15vh;
+  }
+
+  .projectsWrapp h1 {
+    color: rgb(207, 139, 12);
+    font-size: 3.5rem;
+    line-height: 3rem;
+    padding-top: 2rem;
+    text-align: center;
+  }
+
+  .cards_wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    margin-top: 3rem;
+    grid-gap: 3rem;
+  }
+  .project_title {
+    padding: 0.5rem;
+    margin-left: 1rem;
+  }
 }
+
+.pointer{
+  cursor: pointer;
 }
 </style>
-
-Azul fosforito: #08fdd8;
-font-family: 'Merienda', cursive;
-style=" backgroundColor: #153A8A"
-
-
-/*-------------- IPHONE 5 ----------------*/
-@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: portrait)
-
-
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px)
-
-/*-------------- HALF SCREEN ----------------*/
-@media only screen and (min-device-width: 500px) and (max-width: 1000px) 
-
-
-/*-------------- FULL SCREEN ----------------*/
-@media only screen and (min-width: 1001px)

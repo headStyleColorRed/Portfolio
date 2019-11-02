@@ -45,8 +45,7 @@ export default {
 <style scoped>
 
 /*-------------- IPHONE 5 ----------------*/
-@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: portrait)
-{
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: portrait){
   
   .projects {
     width: 100vw;
@@ -105,12 +104,74 @@ export default {
 
 }
 
+/*-------------- HALF SCREEN ----------------*/
+@media only screen and (min-device-width: 500px) and (max-width: 1000px){
+  
+  
+  .projects {
+    min-height: 100vh;
+    width: 100vw;
+    background-color: #252627;
+  }
+
+  .projectsWrapp {
+    margin-top: 2rem;
+    margin-left: 3rem;
+    color: whitesmoke;
+    display: grid;
+  }
+
+  .leftDiv{
+    grid-area: "text";
+  }
+
+  .projectsWrapp p {
+    text-align: left;
+    font-size: 0.9rem;
+    font-weight: 300;
+    padding-right: 3rem;
+  }
+
+  .projectsWrapp h1 {
+    text-align: center;
+    color: rgb(207, 139, 12);
+    margin-bottom: 3rem;
+  }
+
+  .rightDiv {
+    grid-area: "pic";
+    display: grid;
+    margin: 2rem;
+  }
+
+  .fotoPerfil {
+    justify-self: center;
+    align-self: center;
+    height: 20vh;
+    border-radius: 50%;
+  }
+
+  .textoPerfil {
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  .mallory {
+    text-align: right;
+    margin-top: -1rem;
+    font-style: oblique;
+  }
+
+
+}
 
 
 /*-------------- FULL SCREEN ----------------*/
 @media only screen and (min-width: 1001px) {
   .projects {
-    height: 100vh;
+    min-height: 100vh;
     width: 100vw;
     background-color: #252627;
   }

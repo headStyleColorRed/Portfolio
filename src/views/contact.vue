@@ -6,7 +6,10 @@
         <p class="presentation">
           I am full of enthusiasm, energy and I will wellcome any offer either at a small startup, or a big corporation.
           <br />If you have any question, don't hesitate to contact me through my email
-          <a href="mailto:tangerineCoder@gmail.com" class="my_mail">tangerineCoder@gmail.com</a>, using the form at your right, or through the social media websites underneath.
+          <a
+            href="mailto:tangerineCoder@gmail.com"
+            class="my_mail"
+          >tangerineCoder@gmail.com</a>, using the form at your right, or through the social media websites underneath.
         </p>
 
         <div class="web_presence">
@@ -30,7 +33,6 @@
           </div>
         </div>
       </div>
-      <div class="lefPartMovile"></div>
       <div class="rightPart">
         <div class="form">
           <div class="name_and_email">
@@ -77,145 +79,8 @@ export default {
 </script>
 
 <style scoped>
-/*-------------- FULL SCREEN ----------------*/
-@media only screen and (min-width: 1001px) {
-  .projects {
-    height: 100vh;
-    width: 100vw;
-    background-color: #252627;
-    padding-left: 8rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .projectsWrapp {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .leftPart h1 {
-    color: rgb(207, 139, 12);
-    font-size: 3.5rem;
-    line-height: 3rem;
-  }
-
-  .leftPart {
-    margin-top: 10vh;
-    color: whitesmoke;
-  }
-
-  .presentation {
-    margin-top: 1.5rem;
-    font-size: 0.9rem;
-    width: 35vw;
-    margin-bottom: -0.5rem;
-  }
-
-  .my_mail {
-    color: #08fdd8;
-  }
-
-  .web_presence {
-    margin-top: 4rem;
-    color: whitesmoke;
-    display: grid;
-  }
-
-  .iconos {
-    font-weight: 300;
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
-    margin-top: 1rem;
-    justify-self: left;
-    grid-gap: 2rem;
-  }
-
-  .celda {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    cursor: pointer;
-  }
-
-  .celda p {
-    justify-self: center;
-  }
-
-  .pointer {
-    margin-top: -1rem;
-  }
-
-  a {
-    text-decoration: none;
-  }
-
-  .rightPart {
-    padding-left: 5rem;
-    width: 45vw;
-    color: rgb(216, 214, 214);
-  }
-
-  .form {
-    margin-top: 7rem;
-    display: grid;
-  }
-
-  .name_and_email {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 3rem;
-    height: 3rem;
-    margin-bottom: 1rem;
-  }
-
-  .name {
-    background-color: #2f3031;
-    display: grid;
-    padding-left: 1rem;
-  }
-  .email {
-    background-color: #2f3031;
-    display: grid;
-    padding-left: 1rem;
-  }
-
-  .subject {
-    height: 3rem;
-    background-color: #2f3031;
-    margin-bottom: 1rem;
-    display: grid;
-    padding-left: 1rem;
-  }
-
-  .message {
-    height: 14rem;
-    background-color: #2f3031;
-    padding: 1rem;
-  }
-
-  .send_button {
-    text-align: center;
-    margin-top: 2rem;
-    color: rgb(207, 139, 12);
-    cursor: pointer;
-  }
-
-  .t_a {
-    height: 100%;
-    width: 100%;
-    resize: none;
-  }
-
-  textarea:focus,
-  input:focus {
-    outline: none;
-  }
-}
-
 /*-------------- IPHONE 5 ----------------*/
-@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: portrait)
-{
-  
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: portrait) {
   .projects {
     width: 100vw;
     background-color: #252627;
@@ -285,7 +150,12 @@ export default {
     color: rgb(216, 214, 214);
   }
 
+  .lefPartMovile {
+    display: none;
+  }
+
   .form {
+    margin-top: 2rem;
     display: grid;
   }
 
@@ -339,7 +209,277 @@ export default {
   input:focus {
     outline: none;
   }
+}
 
+/*-------------- HALF SCREEN ----------------*/
+@media only screen and (min-device-width: 500px) and (max-width: 1000px) {
+  .projects {
+    width: 100vw;
+    background-color: #252627;
+    display: grid;
+  }
+
+  .projectsWrapp {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .leftPart h1 {
+    color: rgb(207, 139, 12);
+    font-size: 3.5rem;
+    line-height: 3rem;
+    margin-top: 3rem;
+    text-align: center;
+  }
+
+  .leftPart {
+    color: whitesmoke;
+  }
+
+  .presentation {
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    padding: 2rem;
+  }
+
+  .my_mail {
+    color: #08fdd8;
+  }
+
+  .web_presence {
+    color: whitesmoke;
+    display: grid;
+  }
+
+  .iconos {
+    font-weight: 300;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    justify-self: left;
+    grid-gap: 2rem;
+  }
+
+  .celda {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    cursor: pointer;
+  }
+
+  .celda p {
+    justify-self: center;
+  }
+
+  .pointer {
+    margin-top: -1rem;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .rightPart {
+    color: rgb(216, 214, 214);
+  }
+
+  .lefPartMovile {
+    display: none;
+  }
+
+  .form {
+    margin-top: 2rem;
+    display: grid;
+  }
+
+  .name_and_email {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .name {
+    height: 3rem;
+    background-color: #2f3031;
+    display: grid;
+    padding-left: 1rem;
+    margin-bottom: 1rem;
+  }
+  .email {
+    height: 3rem;
+    background-color: #2f3031;
+    display: grid;
+    padding-left: 1rem;
+  }
+
+  .subject {
+    height: 3rem;
+    background-color: #2f3031;
+    margin-bottom: 1rem;
+    display: grid;
+    padding-left: 1rem;
+  }
+
+  .message {
+    height: 14rem;
+    background-color: #2f3031;
+    padding: 1rem;
+  }
+
+  .send_button {
+    text-align: center;
+    margin-top: 2rem;
+    color: rgb(207, 139, 12);
+    cursor: pointer;
+  }
+
+  .t_a {
+    height: 100%;
+    width: 100%;
+    resize: none;
+  }
+
+  textarea:focus,
+  input:focus {
+    outline: none;
+  }
+}
+
+/*-------------- FULL SCREEN ----------------*/
+@media only screen and (min-width: 1001px) {
+  .projects {
+    min-height: 100vh;
+    width: 100vw;
+    background-color: #252627;
+    padding-left: 8rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .projectsWrapp {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .leftPart h1 {
+    color: rgb(207, 139, 12);
+    font-size: 3.5rem;
+    line-height: 3rem;
+  }
+
+  .leftPart {
+    margin-top: 10vh;
+    color: whitesmoke;
+  }
+
+  .presentation {
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    width: 35vw;
+    margin-bottom: -0.5rem;
+  }
+
+  .my_mail {
+    color: #08fdd8;
+  }
+
+  .web_presence {
+    margin-top: 4rem;
+    color: whitesmoke;
+    display: grid;
+  }
+
+  .iconos {
+    font-weight: 300;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 1rem;
+    justify-self: left;
+    grid-gap: 2rem;
+  }
+
+  .celda {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    cursor: pointer;
+  }
+
+  .celda p {
+    justify-self: center;
+  }
+
+  .pointer {
+    margin-top: -1rem;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .lefPartMovile {
+    display: initial;
+  }
+
+  .rightPart {
+    padding-left: 5rem;
+    width: 45vw;
+    color: rgb(216, 214, 214);
+  }
+
+  .form {
+    margin-top: 7rem;
+    display: grid;
+  }
+
+  .name_and_email {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 3rem;
+    height: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .name {
+    background-color: #2f3031;
+    display: grid;
+    padding-left: 1rem;
+  }
+  .email {
+    background-color: #2f3031;
+    display: grid;
+    padding-left: 1rem;
+  }
+
+  .subject {
+    height: 3rem;
+    background-color: #2f3031;
+    margin-bottom: 1rem;
+    display: grid;
+    padding-left: 1rem;
+  }
+
+  .message {
+    height: 14rem;
+    background-color: #2f3031;
+    padding: 1rem;
+  }
+
+  .send_button {
+    text-align: center;
+    margin-top: 2rem;
+    color: rgb(207, 139, 12);
+    cursor: pointer;
+  }
+
+  .t_a {
+    height: 100%;
+    width: 100%;
+    resize: none;
+  }
+
+  textarea:focus,
+  input:focus {
+    outline: none;
+  }
 }
 </style>
 

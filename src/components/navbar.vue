@@ -35,11 +35,11 @@
         <v-navigation-drawer  v-model="drawer" absolute temporary dark >
           <v-list-item>
             <v-list-item-avatar>
-              <v-img src="https://randomuser.me/api/portraits/men/78.jpg"></v-img>
+              <v-img src="../assets/fotos/perfil.png"></v-img>
             </v-list-item-avatar>
 
             <v-list-item-content>
-              <v-list-item-title>John Leider</v-list-item-title>
+              <v-list-item-title>Rodrigo Labrador</v-list-item-title>
             </v-list-item-content>
           </v-list-item>
 
@@ -91,14 +91,24 @@ export default {
 
 .navbarMobile{
   background-color: #25262700;
-  position: absolute;
-  height: 50vh;
+  position: fixed;
+  z-index: 1;
+  height: 100vh;
   width: 50vw;
   padding: 1rem;
   }
 
+.hamburguer{
+  position: fixed;
+  padding: 5px 7px;
+  background-color: #252627;
+}
+
 /*-------------- FULL SCREEN ----------------*/
 @media only screen and (min-width: 1001px) {
+  .navbarMobile{
+    display: none;
+  }
   .navbar {
     z-index: 99;
     position: fixed;
