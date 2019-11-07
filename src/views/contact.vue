@@ -18,11 +18,11 @@
               <v-icon class="pointer" color="#00aced">fab fa-twitter</v-icon>
               <p>Twitter</p>
             </div>
-            <div class="git_hub celda">
+            <div v-on:click ="send_to_web('github')" class="git_hub celda">
               <v-icon class="pointer" color="orange">fab fa-github</v-icon>
               <p>Github</p>
             </div>
-            <div class="linkedin celda">
+            <div  v-on:click ="send_to_web('linkedin')" class="linkedin celda">
               <v-icon class="pointer" color="#0077B5">fab fa-linkedin</v-icon>
               <p>Linkedin</p>
             </div>
@@ -73,6 +73,15 @@ export default {
     setTimeout(() => {
       this.loaded = true;
     }, 700);
+  },
+  methods: {
+    send_to_web(event) {
+      if (event == "github")
+        window.open("https://github.com/headStyleColorRed", "_blank");
+      else if (event == "linkedin")
+        window.open("https://www.linkedin.com/in/rodrigo-labrador-serrano-07b9a013b/", "_blank");
+
+    }
   },
   components: {}
 };
