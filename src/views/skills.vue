@@ -60,13 +60,13 @@ export default {
           longitudCero: "0rem"
         },
         3: {
-          nombre: "Git & GitHub",
+          nombre: "Vue & React",
           longitud: "15rem",
           longitudCero: "0rem"
         },
         4: {
-          nombre: "Object Oriented Programming",
-          longitud: "14rem",
+          nombre: "MongoDB",
+          longitud: "12rem",
           longitudCero: "0rem"
         },
         5: {

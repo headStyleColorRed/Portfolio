@@ -6,11 +6,63 @@
         <br />Projects
       </h1>
       <v-timeline dark class="temporalidad">
+        <!--    E S C A L A D A   P E D R I Z A  -->
+        <v-timeline-item small color="#CF8B0C">
+          <span slot="opposite" class="opposite">
+            <p class="textoExplicacion">
+              <span class="fecha">01/2020 -</span> This is a PWA project that will have a list and explanation of all the routes in La cabrera peak. Only for mobile use. Technologies used:
+              <br />
+              <span class="enAzul">React / React-Router / Reactstrap</span>
+            </p>
+          </span>
+
+          <div class="cuadradoThumbnailWrapper">
+            <div
+              class="cuadradoThumbnail"
+              style="gridTemplateColumns:1fr; backgroundColor: #23423A"
+            >
+              <img class="thumbnailImg" src="../assets/fotos/landscape.jpg" alt />
+              <h3>Climbing Ap</h3>
+            </div>
+            <div class="cuadradoThumbnailBack">
+              <p>Check my App :</p>
+              <a target="_blank" href="https://lacabrera-67f02.firebaseapp.com/">
+                <p class="botonGooglePlay">Go!</p>
+              </a>
+            </div>
+          </div>
+        </v-timeline-item>
+
+        <!--  I N T E L I G E N C  I A     -->
+        <v-timeline-item small color="#CF8B0C">
+          <span slot="opposite" class="opposite">
+            <p class="textoExplicacionDerecha">
+              <span class="fecha">09/2019 -</span> This is a project that I did using both React and Vue. The website takes your picture, sends it to a Node.js server that will send the data to an Artificial inteligence model that will return the face params. Then will compare it to the ones in the MongoDB database and answer who you are.
+              Technologies used:
+              <br />
+              <span class="enAzul">Vue / React / MongoDB / Node / Python</span>
+            </p>
+          </span>
+
+          <div class="cuadradoThumbnailWrapperDerecha">
+            <div class="cuadradoThumbnailDerecha">
+              <img class="thumbnailImgDerecha" src="../assets/fotos/inteligencia.png" alt />
+              <h3>Inteligencia</h3>
+            </div>
+            <div class="cuadradoThumbnailBackDerecha">
+              <p>Check my Website:</p>
+              <a target="_blank" href="https://inteligenc-ia-10032.firebaseapp.com/">
+                <p class="botonGooglePlay">Go!</p>
+              </a>
+            </div>
+          </div>
+        </v-timeline-item>
+
         <!--    C L O T H E S    S T O R E       -->
         <v-timeline-item small color="#CF8B0C">
           <span slot="opposite" class="opposite">
             <p class="textoExplicacion">
-              <span class="fecha">05/2019 -</span> For this website I wanted to practice with the app state and reactiveness of Vuex.  Technologies used:
+              <span class="fecha">05/2019 -</span> For this website I wanted to practice with the app state and reactiveness of Vuex. Technologies used:
               <br />
               <span class="enAzul">Vue / Vue Router / Vuex /Vuetify</span>
             </p>
@@ -25,7 +77,7 @@
               <h3>E-Store</h3>
             </div>
             <div class="cuadradoThumbnailBack">
-              <p>Check my App in Google Play:</p>
+              <p>Check my Website:</p>
               <a target="_blank" href="https://shop-store-ec247.firebaseapp.com/">
                 <p class="botonGooglePlay">Go!</p>
               </a>
@@ -50,7 +102,7 @@
               <h3 style="font-family: 'Amatic SC', cursive;font-size:3rem">La Cavatina</h3>
             </div>
             <div class="cuadradoThumbnailBackDerecha">
-              <p>Check my App in Google Play:</p>
+              <p>Check my Website:</p>
               <a target="_blank" href="https://restauranteshop-4a866.web.app/">
                 <p class="botonGooglePlay">Go!</p>
               </a>
@@ -101,7 +153,7 @@
               <img class="thumbnailImgDerecha" src="../assets/fotos/helios.png" alt />
             </div>
             <div class="cuadradoThumbnailBackDerecha">
-              <p>Check my App in Google Play:</p>
+              <p>Check my Website:</p>
               <a target="_blank" href="https://helios-a844e.firebaseapp.com/">
                 <p class="botonGooglePlay">Go!</p>
               </a>
@@ -111,6 +163,39 @@
       </v-timeline>
 
       <div class="cards_wrapper">
+
+        <!--    E S C A L A D A   P E D R I Z A  -->
+        <v-card
+          v-on:click="go_to_web('https://lacabrera-67f02.firebaseapp.com/')"
+          class="mx-auto pointer"
+          max-width="300"
+          raised
+        >
+          <v-img class="white--text align-end" height="150" src="../assets/fotos/landscape.jpg"></v-img>
+
+          <h4 class="project_title">La Cabrera</h4>
+
+          <v-card-text class="text--primary pt-0">
+            <div>Climbing App</div>
+          </v-card-text>
+        </v-card>
+
+        <!--  I N T E L I G E N C  I A     -->
+        <v-card
+          v-on:click="go_to_web('https://inteligenc-ia-10032.firebaseapp.com/')"
+          class="mx-auto pointer"
+          max-width="300"
+          raised
+        >
+          <v-img class="white--text align-end" height="150" src="../assets/fotos/inteligencia.png"></v-img>
+
+          <h4 class="project_title">Inteligenc-ia</h4>
+
+          <v-card-text class="text--primary pt-0">
+            <div>Face Recognition</div>
+          </v-card-text>
+        </v-card>
+
         <!--    C L O T H E S    S T O R E       -->
         <v-card
           v-on:click="go_to_web('https://shop-store-ec247.firebaseapp.com/')"
@@ -460,7 +545,7 @@ export default {
   }
 }
 
-.pointer{
+.pointer {
   cursor: pointer;
 }
 </style>
